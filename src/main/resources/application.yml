@@ -1,0 +1,21 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /
+spring:
+  redis:
+    database: 0
+    timeout: 6000ms
+    sentinel:
+      # 此处要填写哨兵端口，而不是 redis 实例端口
+      nodes:
+        - 127.0.0.1:26379
+        - 127.0.0.1:26380
+        - 127.0.0.1:26381
+      master: mymaster
+    lettuce:
+      pool:
+        max-active: 100
+        max-idle: 10
+        min-idle: 2
+        max-wait: -1

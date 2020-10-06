@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: redis-cluster-test
+  main:
+    allow-bean-definition-overriding: true
